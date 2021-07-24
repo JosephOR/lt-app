@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.details-label {
+	@apply block text-gray-700 text-sm font-bold mb-2
+}
+
+.details-input {
+	@apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-purple-500
+}
+
+.warning-text {
+	@apply text-red-500 text-xs italic;
+}

@@ -1,0 +1,19 @@
+<form [formGroup]="form" class="flex flex-col md:flex-row gap-1.5">
+	<div class="flex-1 mb-4">
+		<label class="details-label">Code:</label>
+		<input type="number" formControlName="phonePrefix"  class="details-input">
+		<div *ngIf="form.controls.phonePrefix.touched && form.controls.phonePrefix.invalid" class="alert alert-danger">
+			<p *ngIf="form.controls.phonePrefix.hasError('required')" class="warning-text">Required.</p>
+			<p *ngIf="form.controls.phonePrefix.hasError('pattern')" class="warning-text">invalid pattern. Country code example (+)353</p>
+		</div>
+	</div>
+	
+	<div class="flex-3 mb-4">
+		<label class="details-label">Number:</label>
+		<input type="number" formControlName="phoneNumber" class="details-input">
+		<div *ngIf="form.controls.phoneNumber.touched && form.controls.phoneNumber.invalid" class="alert alert-danger">
+			<p *ngIf="form.controls.phoneNumber.hasError('required')" class="warning-text">Required.</p>
+			<p *ngIf="form.controls.phoneNumber.hasError('pattern')" class="warning-text">invallid pattern. Please enter 9 digits</p>
+		</div>
+	</div>
+</form>
